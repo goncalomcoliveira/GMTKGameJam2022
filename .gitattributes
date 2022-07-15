@@ -3,3 +3,4 @@ Project/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac filter=lfs d
 Musaranho[[:space:]]Project/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac filter=lfs diff=lfs merge=lfs -text
 Musaranho[[:space:]]Project/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld filter=lfs diff=lfs merge=lfs -text
 Musaranho[[:space:]]Project/Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld filter=lfs diff=lfs merge=lfs -text
+Musaranho[[:space:]]Project/Library/PackageCache/com.unity.burst@1.6.6/.Runtime/hostmac/ldd filter=lfs diff=lfs merge=lfs -text
