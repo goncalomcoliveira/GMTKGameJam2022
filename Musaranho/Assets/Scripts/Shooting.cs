@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public float Bulletdist;
     public Camera cam;
 
     public Transform firePoint;
@@ -19,7 +20,6 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         Look();
-        Debug.Log(fireRate);
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
         {
             Shoot();
