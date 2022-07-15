@@ -32,7 +32,7 @@ public class EnemyAI : MonoBehaviour
         isInChaseRange = Physics2D.OverlapCircle(transform.position, sh.chaseRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, sh.attackRadius, whatIsPlayer);
 
-         Debug.Log(isInChaseRange + " " + sh.chaseRadius + isInAttackRange + " " + sh.attackRadius);
+        //Debug.Log(isInChaseRange + " " + sh.chaseRadius + isInAttackRange + " " + sh.attackRadius);
 
         dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
