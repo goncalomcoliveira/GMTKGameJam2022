@@ -12,7 +12,7 @@ public class EnemyBullet : MonoBehaviour
         if(coll.transform.tag == "Player")
         {
             x = coll.gameObject.GetComponent<Shooting>().GetFace();
-            y = Random.Range(1, 6);
+            y = Random.Range(1, 7);
             if (x == y)
             {
                 if (y == 6)

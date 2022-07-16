@@ -225,13 +225,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9cfe86214adce1478cea2ace09011b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bulletdist: 0
   cam: {fileID: 1617398570}
   firePoint: {fileID: 1025139120}
+  range: 0.15
+  rangeRiffle: 0.1
+  fireRate1: 10
+  fireRate3: 100
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
   fireballPrefab: {fileID: 6178842346730439232, guid: eba2ad38ff527a7448283ce6b4b8a035, type: 3}
+  arrowPrefab: {fileID: 0}
+  bomb: {fileID: 0}
   bulletForce: 20
-  range: 0.15
+  arrowForce: 0
+  bombForce: 0
+  fireballForce: 0
+  RiffleForce: 0
 --- !u!114 &299221782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1644902762}
-  bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
+  bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
   attackRadius: 5
   chaseRadius: 6
   bulletForce: 20
