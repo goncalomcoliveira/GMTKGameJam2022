@@ -61,6 +61,7 @@ public class Shooting : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             face = Random.Range(1, 7);
+            gameObject.GetComponent<PlayerFace>().Set(face - 1);
             Debug.Log(face);
         }
         Look();
