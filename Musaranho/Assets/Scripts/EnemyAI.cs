@@ -26,30 +26,22 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
-        Debug.Log(target.name);
     }
 
     private void Update() {
-        anim.SetBool("isRunning", isInChaseRange);
-
         isInChaseRange = Physics2D.OverlapCircle(transform.position, sh.chaseRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, sh.attackRadius, whatIsPlayer);
+
+        anim.SetBool("isRunning", (isInChaseRange && !isInAttackRange));
 
         dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         dir.Normalize();
         movement = dir;
-
-        if (shouldRotate) {
-            int dirx = (int) dir.x * 10;
-            int diry = (int) dir.y * 10;
-            anim.SetInteger("X", dirx);
-            anim.SetInteger("Y", diry);
-        }
     }
 
     private void FixedUpdate() {
-        if (isInChaseRange && !isInAttackRange) MoveCharacter(movement);
+        if (isInChaseRange && !isInAttackRange) MoveCharacter();
         else if (isInAttackRange && Time.time >= nextTimeToFire) {
             nextTimeToFire = Time.time + 1f / fireRate;
             rb.velocity = Vector2.zero;
@@ -57,7 +49,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private void MoveCharacter(Vector2 dir) {
-        rb.MovePosition((Vector2) transform.position + (dir * speed * Time.deltaTime));
+    private void MoveCharacter() {
+        if (shouldRotate) {
+            anim.SetInteger("X", (int) Mathf.Round(movement.x));
+            anim.SetInteger("Y", (int) Mathf.Round(movement.y));
+        }
+        rb.MovePosition((Vector2) transform.position + ((Vector2) movement * speed * Time.deltaTime));
     }
 }

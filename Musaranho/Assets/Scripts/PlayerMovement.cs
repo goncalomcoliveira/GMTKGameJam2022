@@ -36,17 +36,6 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        /*
-        if (moveX < 0) {
-            anim.SetBool("isRunning", true);
-            sprite.localScale = new Vector3(-1f, 1f, 1f);
-        }
-        else if (moveX > 0) {
-            
-            sprite.localScale = new Vector3(1f, 1f, 1f);
-        }
-        */
-
         int movX, movY;
         if (moveX >= 0)
             movX = Mathf.CeilToInt(moveX);

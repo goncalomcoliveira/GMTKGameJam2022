@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 56597be5e055a7741b2e3cf1d3301f8a
+guid: fc4963893e799c24dae0bfb5ddd54e8b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 8DirectionTest_0
+      name: dice_down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45e33a275b192d4468b74793a3504a65
-      internalID: 1703152965
+      spriteID: 253ada1731824a84ba4e6a867516b25f
+      internalID: -746479583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_1
+      name: dice_down_1
       rect:
         serializedVersion: 2
         x: 24
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 030ad4f4360bfda4ebdc43e88ee34e95
-      internalID: 106925917
+      spriteID: 97c4481a9bb15494996d54f9685cfd0f
+      internalID: 991468919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_2
+      name: dice_down_2
       rect:
         serializedVersion: 2
         x: 48
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b255a3dd2642bd64e8e904c924f8c45c
-      internalID: -474402055
+      spriteID: 2f5055b2f184db94cb5591d6e07c19ca
+      internalID: -1797320697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_3
+      name: dice_down_3
       rect:
         serializedVersion: 2
         x: 72
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f333c4007420f8b419da5052cce88c46
-      internalID: 1483114045
+      spriteID: 1f9e10d07f705c24fb990e2ebc3376db
+      internalID: 827500562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_4
+      name: dice_down_4
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc733f62cedc8c14c9e6bbceed33e913
-      internalID: 1192742253
+      spriteID: 0980013f8bb7e6d4e9ce326630dca302
+      internalID: -1041246883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_5
+      name: dice_down_5
       rect:
         serializedVersion: 2
         x: 120
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279e601fd7d390942ad738b426bd99bf
-      internalID: -715258953
+      spriteID: ebf558313427c934cb9352be624a2068
+      internalID: 1517151839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_6
+      name: dice_down_6
       rect:
         serializedVersion: 2
         x: 144
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f738a46c43f384a899e35640167c3c
-      internalID: 1120041259
+      spriteID: dd9aeb3edd128534caf3f0e453cfc005
+      internalID: 629468013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 8DirectionTest_7
+      name: dice_down_7
       rect:
         serializedVersion: 2
         x: 168
@@ -277,8 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55ae9c2de2f16274da040ae045b2b247
-      internalID: 1752078866
+      spriteID: 999b7a68870951b48907b6b63b902991
+      internalID: 1619140670
       vertices: []
       indices: 
       edges: []
@@ -294,14 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      8DirectionTest_1: 106925917
-      8DirectionTest_6: 1120041259
-      8DirectionTest_2: -474402055
-      8DirectionTest_4: 1192742253
-      8DirectionTest_0: 1703152965
-      8DirectionTest_3: 1483114045
-      8DirectionTest_5: -715258953
-      8DirectionTest_7: 1752078866
+      dice_down_6: 629468013
+      dice_down_7: 1619140670
+      dice_down_1: 991468919
+      dice_down_4: -1041246883
+      dice_down_2: -1797320697
+      dice_down_0: -746479583
+      dice_down_3: 827500562
+      dice_down_5: 1517151839
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -380,7 +380,7 @@ Animator:
   m_GameObject: {fileID: 1338154624}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06541248a607836418862f79a77d4364, type: 2}
+  m_Controller: {fileID: 9100000, guid: b698ec1d3db0cb040bd4b88acb2947bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -491,8 +491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1644902762}
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
-  attackRadius: 5
-  chaseRadius: 6
+  attackRadius: 2
+  chaseRadius: 20
   bulletForce: 20
 --- !u!50 &1338154630
 Rigidbody2D:
