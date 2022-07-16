@@ -16,9 +16,13 @@ public class Shooting : MonoBehaviour
     public float range;
     int face = 0;
 
-    void ChangeFace(int x)
+    public void ChangeFace(int x)
     {
         face = x;
+    }
+    public int GetFace()
+    {
+        return face;
     }
     void Update()
     {
