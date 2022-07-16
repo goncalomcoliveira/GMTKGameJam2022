@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int damage;
+    void OnCollisionEnter2D(Collision2D coll)
     {
-        
+        if (coll.transform.tag == "Enemy")
+        {
+            coll.gameObject.GetComponent<EnemyLife>().takeDamage(damage);
+        }
+        if (coll.transform.tag == "Parede")
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

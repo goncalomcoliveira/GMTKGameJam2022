@@ -235,13 +235,14 @@ MonoBehaviour:
   fireRate3: 0
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
   fireballPrefab: {fileID: 6178842346730439232, guid: eba2ad38ff527a7448283ce6b4b8a035, type: 3}
-  arrowPrefab: {fileID: 0}
-  bombPrefab: {fileID: 0}
-  bulletForce: 20
-  arrowForce: 0
-  bombForce: 0
-  fireballForce: 0
-  RiffleForce: 0
+  arrowPrefab: {fileID: 1505167535238073228, guid: 5b18ab5b722044241bbc18b3e419adcd, type: 3}
+  bombPrefab: {fileID: 8867291046222560077, guid: 94cb63fa9e102f348b6c082465307db0, type: 3}
+  lazerPrefab: {fileID: 2904650675199986888, guid: a1ce32a34d67ad34e9ed17c7efa3e411, type: 3}
+  bulletForce: 0
+  arrowForce: 20
+  bombForce: 20
+  fireballForce: 20
+  RiffleForce: 20
 --- !u!114 &299221782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,7 +404,8 @@ GameObject:
   - component: {fileID: 1338154631}
   - component: {fileID: 1338154628}
   - component: {fileID: 1338154630}
-  m_Layer: 0
+  - component: {fileID: 1338154633}
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -582,6 +584,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideControllers: []
   overrider: {fileID: 0}
+--- !u!61 &1338154633
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338154624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1617398568
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1644902762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

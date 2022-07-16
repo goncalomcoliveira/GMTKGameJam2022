@@ -8,7 +8,8 @@ public class PlayerFace : MonoBehaviour{
     [SerializeField] private AnimatorOverrider overrider;
 
     public void Set(int value) {
-        overrider.SetAnimations(overrideControllers[value]);
+        if (value >= 0 && value < overrideControllers.Length) 
+            overrider.SetAnimations(overrideControllers[value]);
     }    
 }
 

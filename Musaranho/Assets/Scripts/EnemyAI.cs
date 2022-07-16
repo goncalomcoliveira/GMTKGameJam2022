@@ -41,11 +41,12 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (isInChaseRange && !isInAttackRange) MoveCharacter();
-        else if (isInAttackRange && Time.time >= nextTimeToFire) {
+        if (isInChaseRange && !isInAttackRange) rb.velocity = Vector2.zero; //MoveCharacter();
+        else if (isInAttackRange && Time.time >= nextTimeToFire)
+        {
             nextTimeToFire = Time.time + 1f / fireRate;
             rb.velocity = Vector2.zero;
-            sh.Shoot(dir);
+            //sh.Shoot(dir);
         }
     }
 
