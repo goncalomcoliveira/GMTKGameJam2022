@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
     
     public float range;
     public float rangeRiffle;
+    public float rangeSamurai;
 
     public float fireRate1;
     public float fireRate3;
@@ -71,6 +72,22 @@ public class Shooting : MonoBehaviour
             {
                 Shoot();
                 nextTimeToFire = Time.time + 1f / fireRate1;
+            }
+        }
+        else if (face == 2)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                EnemyBullet[] list = (EnemyBullet[])Resources.FindObjectsOfTypeAll(typeof(EnemyBullet));
+
+                foreach (EnemyBullet go in list)
+                {
+                    if (go.Bounce(rangeSamurai)){
+                        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                        rb.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-100, 100), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+                    }
+                }
             }
         }
         else if (face == 3)

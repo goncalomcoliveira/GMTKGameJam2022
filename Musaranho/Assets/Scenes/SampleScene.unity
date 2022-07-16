@@ -635,6 +635,7 @@ MonoBehaviour:
   firePoint: {fileID: 1025139120}
   range: 0.15
   rangeRiffle: 0
+  rangeSamurai: 100
   fireRate1: 10
   fireRate3: 100
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
@@ -847,6 +848,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 358842967}
   m_CullTransparentMesh: 1
+--- !u!1001 &412102048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.957337
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.038456
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1019452396153536287, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+      propertyPath: m_Name
+      value: Bullet Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
 --- !u!1 &455414692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,8 +1378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1644902762}
   bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
-  attackRadius: 20
-  chaseRadius: 20
+  attackRadius: 5
+  chaseRadius: 5
   bulletForce: 20
 --- !u!50 &1338154630
 Rigidbody2D:
