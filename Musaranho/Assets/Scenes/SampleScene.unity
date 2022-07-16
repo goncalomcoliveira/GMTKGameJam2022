@@ -236,7 +236,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
   fireballPrefab: {fileID: 6178842346730439232, guid: eba2ad38ff527a7448283ce6b4b8a035, type: 3}
   arrowPrefab: {fileID: 0}
-  bomb: {fileID: 0}
+  bombPrefab: {fileID: 0}
   bulletForce: 20
   arrowForce: 0
   bombForce: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   overrideControllers:
   - {fileID: 22100000, guid: 19030a5d197abe843aa7898052e52f1f, type: 2}
-  - {fileID: 22100000, guid: 8ee06fa3febf89840916480d6b7d0f8d, type: 2}
+  - {fileID: 22100000, guid: f1d27206592426b4e8a00f0b51281cc9, type: 2}
   overrider: {fileID: 299221787}
 --- !u!114 &299221787
 MonoBehaviour:
