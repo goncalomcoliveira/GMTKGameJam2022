@@ -5,13 +5,13 @@ using UnityEngine;
 public class Arrow : MonoBehaviour
 {
     public int damage;
-    void OnCollisionEnter2D(Collision2D coll)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (coll.transform.tag == "Enemy")
+        if (collision.transform.tag == "Enemy")
         {
-            coll.gameObject.GetComponent<EnemyLife>().takeDamage(damage);
+            collision.gameObject.GetComponent<EnemyLife>().takeDamage(damage);
         }
-        if (coll.transform.tag == "Parede")
+        if (collision.transform.tag == "Wall")
         {
             Destroy(gameObject);
         }

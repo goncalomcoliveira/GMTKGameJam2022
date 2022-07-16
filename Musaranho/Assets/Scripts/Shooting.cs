@@ -28,13 +28,30 @@ public class Shooting : MonoBehaviour
     public float fireballForce;
     public float RiffleForce;
 
-
     int face = 0;
 
-    public void ChangeFace(int x)
+    private void Start()
     {
-        face = x;
+        ChangeFace();
     }
+
+    public void ChangeFace()
+    {
+        int y = Random.Range(1, 7);
+        if (face == y)
+        {
+            if (y == 6)
+            {
+                y = 5;
+            }
+            else
+            {
+                y++;
+            }
+        }
+        face = y;
+        gameObject.GetComponent<PlayerFace>().Set(y - 1);
+        }
     public int GetFace()
     {
         return face;
@@ -63,7 +80,7 @@ public class Shooting : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate3;
             }
         }
-        else if(face != 2)
+        else
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -94,7 +111,7 @@ public class Shooting : MonoBehaviour
         }
         else if (face == 4)
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
         }
