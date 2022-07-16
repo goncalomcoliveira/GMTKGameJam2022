@@ -19,6 +19,9 @@ public class EnemyAI : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
+    private float nextTimeToFire = 0f;
+    float fireRate = 1f;
+
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -47,7 +50,8 @@ public class EnemyAI : MonoBehaviour
 
     private void FixedUpdate() {
         if (isInChaseRange && !isInAttackRange) MoveCharacter(movement);
-        else if (isInAttackRange) {
+        else if (isInAttackRange && Time.time >= nextTimeToFire) {
+            nextTimeToFire = Time.time + 1f / fireRate;
             rb.velocity = Vector2.zero;
             sh.Shoot(dir);
         }
