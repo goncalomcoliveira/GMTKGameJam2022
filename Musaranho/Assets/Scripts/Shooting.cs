@@ -16,9 +16,17 @@ public class Shooting : MonoBehaviour
     public float range;
     int face = 0;
 
-
+    void ChangeFace(int x)
+    {
+        face = x;
+    }
     void Update()
     {
+        if (Input.GetButtonDown("Fire2"))
+        {
+            face = Random.Range(1, 6);
+            Debug.Log(face);
+        }
         Look();
         if(face == 1)
         {
