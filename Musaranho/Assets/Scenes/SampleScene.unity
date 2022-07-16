@@ -625,6 +625,7 @@ MonoBehaviour:
   firePoint: {fileID: 1025139120}
   range: 0.15
   rangeRiffle: 0
+  rangeSamurai: 0
   fireRate1: 10
   fireRate3: 100
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
@@ -1183,7 +1184,7 @@ GameObject:
   - component: {fileID: 1338154630}
   - component: {fileID: 1338154632}
   m_Layer: 10
-  m_Name: Paw
+  m_Name: Pawn
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
