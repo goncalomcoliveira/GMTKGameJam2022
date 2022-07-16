@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
         }
         else if (face == 3)
         {
-            if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
             {
                 Shoot();
                 nextTimeToFire = Time.time + 1f / fireRate;
