@@ -32,8 +32,6 @@ public class EnemyAI : MonoBehaviour
         isInChaseRange = Physics2D.OverlapCircle(transform.position, sh.chaseRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, sh.attackRadius, whatIsPlayer);
 
-        //Debug.Log(isInChaseRange + " " + sh.chaseRadius + isInAttackRange + " " + sh.attackRadius);
-
         dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         dir.Normalize();
@@ -48,16 +46,11 @@ public class EnemyAI : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        if (isInChaseRange && !isInAttackRange) {
-            //Debug.Log("It's far");
-            MoveCharacter(movement);
-        }
+        if (isInChaseRange && !isInAttackRange) MoveCharacter(movement);
         else if (isInAttackRange) {
             rb.velocity = Vector2.zero;
-            //Debug.Log("It's shooting " + target.transform.position);
             sh.Shoot(dir);
         }
-        //else Debug.Log("Nothing");
     }
 
     private void MoveCharacter(Vector2 dir) {
