@@ -6,6 +6,7 @@ public class Fireball : MonoBehaviour
 {
     Transform player;
     public float range;
+    public int damage;
 
     private void Start()
     {
@@ -14,6 +15,10 @@ public class Fireball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.transform.tag == "Enemy")
+        {
+            coll.gameObject.GetComponent<EnemyLife>().takeDamage(damage);
+        }
         Destroy(gameObject);
     }
 
