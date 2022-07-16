@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAI : MonoBehaviour
+public class TopHatMovement : MonoBehaviour
 {
     public float speed;
     public EnemyShooting sh;
@@ -24,37 +24,43 @@ public class EnemyAI : MonoBehaviour
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
     private void Update() {
         isInChaseRange = Physics2D.OverlapCircle(transform.position, sh.chaseRadius, whatIsPlayer);
-        isInAttackRange = Physics2D.OverlapCircle(transform.position, sh.attackRadius, whatIsPlayer);
 
-        anim.SetBool("isRunning", (isInChaseRange && !isInAttackRange));
+        //anim.SetBool("isRunning", (isInChaseRange && !isInAttackRange));
 
         dir = target.position - transform.position;
+
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         dir.Normalize();
         movement = dir;
     }
 
     private void FixedUpdate() {
-        if (isInChaseRange && !isInAttackRange) rb.velocity = Vector2.zero; //MoveCharacter();
+        if (isInChaseRange && !isInAttackRange) MoveCharacter();
         else if (isInAttackRange && Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
             rb.velocity = Vector2.zero;
-            //sh.Shoot(dir);
+            sh.Shoot(dir);
         }
     }
 
     private void MoveCharacter() {
-        if (shouldRotate) {
+        /*if (shouldRotate) {
             anim.SetInteger("X", (int) Mathf.Round(movement.x));
             anim.SetInteger("Y", (int) Mathf.Round(movement.y));
-        }
-        rb.MovePosition((Vector2) transform.position + ((Vector2) movement * speed * Time.deltaTime));
+        }*/
+        float posx = (float) Random.Range(-sh.attackRadius,sh.attackRadius);
+        int signal = Random.Range(0,2);
+        if (signal == 0) signal = -1;
+        float posy = (Mathf.Sqrt(Mathf.Pow(sh.attackRadius, 2) - Mathf.Pow(posx, 2)));
+
+        Vector2 pos = new Vector2(posx + target.position.x, signal*posy + target.position.y);
+        rb.MovePosition(pos);
     }
 }
