@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 299221780}
   - component: {fileID: 299221779}
   - component: {fileID: 299221783}
+  - component: {fileID: 299221787}
+  - component: {fileID: 299221786}
   - component: {fileID: 299221782}
   - component: {fileID: 299221781}
   - component: {fileID: 299221784}
@@ -325,6 +327,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &299221786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299221778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a6e1ef32136a94d9576f0fa67eb483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideControllers:
+  - {fileID: 22100000, guid: 19030a5d197abe843aa7898052e52f1f, type: 2}
+  - {fileID: 22100000, guid: 8ee06fa3febf89840916480d6b7d0f8d, type: 2}
+  overrider: {fileID: 299221787}
+--- !u!114 &299221787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299221778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c474b5627c125041baf3f76dd3943be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025139119
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +398,7 @@ GameObject:
   - component: {fileID: 1338154627}
   - component: {fileID: 1338154626}
   - component: {fileID: 1338154625}
+  - component: {fileID: 1338154632}
   - component: {fileID: 1338154629}
   - component: {fileID: 1338154631}
   - component: {fileID: 1338154628}
@@ -537,6 +568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+--- !u!114 &1338154632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338154624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4a6e1ef32136a94d9576f0fa67eb483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideControllers: []
+  overrider: {fileID: 0}
 --- !u!1 &1617398568
 GameObject:
   m_ObjectHideFlags: 0

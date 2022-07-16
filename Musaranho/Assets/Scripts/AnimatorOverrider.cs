@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationOverride : MonoBehaviour{   
+
+public class AnimatorOverrider : MonoBehaviour{   
     private Animator anim;
 
     private void Awake() {
@@ -13,3 +14,4 @@ public class AnimationOverride : MonoBehaviour{
         anim.runtimeAnimatorController = overrideController;
     }
 }
+
