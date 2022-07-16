@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2eb73d56231ffe4408199322efbc2f31
+guid: d4f1b9300ad902e4483248f2a77e6ef0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: one_up_0
+      name: two_down_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 561d01d75e4cb004ba2ccf0b322ca5b8
-      internalID: 1074142192
+      spriteID: 1ee43604a6b31c14e9ada7bf10131b7f
+      internalID: 104287360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_1
+      name: two_down_1
       rect:
         serializedVersion: 2
         x: 24
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f677a933877589429520bef504bf504
-      internalID: 1747496905
+      spriteID: 11bc4779aaa626b4cbc7a2d2ce27cd73
+      internalID: 805396263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_2
+      name: two_down_2
       rect:
         serializedVersion: 2
         x: 48
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c47267df7df11094a8519a0b9b4592b4
-      internalID: -312791048
+      spriteID: 248f31c10e5fe2c48b9adb306fcf2449
+      internalID: -290325580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_3
+      name: two_down_3
       rect:
         serializedVersion: 2
         x: 72
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 422348a2d3409564cbb5285a652bdd39
-      internalID: 767972355
+      spriteID: fafaf25c84310284082c55c9feacca29
+      internalID: 1473092364
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_4
+      name: two_down_4
       rect:
         serializedVersion: 2
         x: 96
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb97ff69c027ac34c850ce591f58bacb
-      internalID: 1990143597
+      spriteID: 31a4d03b3a3801c45a41f6095d6c3f4f
+      internalID: 594227384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_5
+      name: two_down_5
       rect:
         serializedVersion: 2
         x: 120
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5886b1d0a7ddd0f4889ca640a8a7ffb2
-      internalID: -1845101439
+      spriteID: af720f79e0e9d0448ba9ce8b844b810f
+      internalID: -72932884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_6
+      name: two_down_6
       rect:
         serializedVersion: 2
         x: 144
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dbcdbfcc74116f4b9bbc1ca74f0cc6f
-      internalID: 907915321
+      spriteID: 49d2263a43795fc43831bee1a1adb52a
+      internalID: 835729997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: one_up_7
+      name: two_down_7
       rect:
         serializedVersion: 2
         x: 168
@@ -277,8 +277,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c52f5980dafdc8b4783121b57c4d1b76
-      internalID: -1932736955
+      spriteID: 353ee49c72a138940be35340e54d8057
+      internalID: -230204098
       vertices: []
       indices: 
       edges: []
@@ -294,14 +294,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      one_up_2: -312791048
-      one_up_5: -1845101439
-      one_up_4: 1990143597
-      one_up_0: 1074142192
-      one_up_7: -1932736955
-      one_up_3: 767972355
-      one_up_6: 907915321
-      one_up_1: 1747496905
+      two_down_2: -290325580
+      two_down_7: -230204098
+      two_down_0: 104287360
+      two_down_6: 835729997
+      two_down_3: 1473092364
+      two_down_5: -72932884
+      two_down_1: 805396263
+      two_down_4: 594227384
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
