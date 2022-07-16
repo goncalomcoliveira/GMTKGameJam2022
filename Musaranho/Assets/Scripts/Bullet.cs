@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    public int damage;
     void OnCollisionEnter2D(Collision2D coll){
-            Destroy(gameObject);
+        if(coll.transform.tag == "Enemy")
+        {
+            coll.gameObject.GetComponent<EnemyLife>().takeDamage(damage);
+        }
+        Destroy(gameObject);
     }
 }
