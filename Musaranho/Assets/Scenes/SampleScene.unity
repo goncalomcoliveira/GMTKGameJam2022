@@ -238,7 +238,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1505167535238073228, guid: 5b18ab5b722044241bbc18b3e419adcd, type: 3}
   bombPrefab: {fileID: 8867291046222560077, guid: 94cb63fa9e102f348b6c082465307db0, type: 3}
   lazerPrefab: {fileID: 2904650675199986888, guid: a1ce32a34d67ad34e9ed17c7efa3e411, type: 3}
-  bulletForce: 0
+  bulletForce: 20
   arrowForce: 20
   bombForce: 20
   fireballForce: 20
