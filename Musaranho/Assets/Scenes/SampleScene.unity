@@ -353,10 +353,10 @@ GameObject:
   - component: {fileID: 216908963}
   - component: {fileID: 216908962}
   - component: {fileID: 216908961}
-  - component: {fileID: 216908960}
   - component: {fileID: 216908959}
+  - component: {fileID: 216908964}
   m_Layer: 0
-  m_Name: Square
+  m_Name: TopHat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 06aecb67cebd892418a21ba60c22c13d, type: 3}
+  m_Sprite: {fileID: -746479583, guid: 0802114bd56f4e54b9785eff383624f9, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -422,7 +422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216908956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.292971, y: -3.2514434, z: 0}
+  m_LocalPosition: {x: -7.296, y: -3.2514434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -451,32 +451,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &216908960
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216908956}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!114 &216908961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +500,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+--- !u!58 &216908964
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216908956}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0030453205, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.31120467
 --- !u!1 &299221778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,9 +1181,9 @@ GameObject:
   - component: {fileID: 1338154631}
   - component: {fileID: 1338154628}
   - component: {fileID: 1338154630}
-  - component: {fileID: 1338154633}
+  - component: {fileID: 1338154632}
   m_Layer: 10
-  m_Name: Enemy
+  m_Name: Paw
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1250,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 560851656b0967240933a7b7751baeed, type: 3}
+  m_Sprite: {fileID: -746479583, guid: 0802114bd56f4e54b9785eff383624f9, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1320,9 +1310,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1644902762}
   bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
-  attackRadius: 20
+  attackRadius: 0.3
   chaseRadius: 20
-  bulletForce: 20
+  bulletForce: 0
 --- !u!50 &1338154630
 Rigidbody2D:
   serializedVersion: 4
@@ -1357,8 +1347,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
---- !u!61 &1338154633
-BoxCollider2D:
+--- !u!58 &1338154632
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1371,18 +1361,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.28640556
 --- !u!1 &1617398568
 GameObject:
   m_ObjectHideFlags: 0
