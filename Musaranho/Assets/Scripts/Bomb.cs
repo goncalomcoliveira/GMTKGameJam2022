@@ -15,7 +15,13 @@ public class Bomb : MonoBehaviour
 
 		if (countdown <= 0f)
 		{
-			FindObjectOfType<EnemyLife>().Explode(range,damage);
+			EnemyLife[] list = (EnemyLife[]) Resources.FindObjectsOfTypeAll(typeof(EnemyLife));
+
+            foreach (EnemyLife go in list)
+            {
+				go.Explode(range, damage);
+			}
+			
 			Destroy(gameObject);
 		}
 	}

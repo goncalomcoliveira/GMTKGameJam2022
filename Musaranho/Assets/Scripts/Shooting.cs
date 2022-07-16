@@ -20,6 +20,7 @@ public class Shooting : MonoBehaviour
     public GameObject fireballPrefab;
     public GameObject arrowPrefab;
     public GameObject bombPrefab;
+    public GameObject lazerPrefab;
 
     public float bulletForce = 20f;
     public float arrowForce;
@@ -81,7 +82,7 @@ public class Shooting : MonoBehaviour
     {
         if(face == 1)
         {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            GameObject bullet = Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-rangeRiffle, rangeRiffle), 0)).normalized * RiffleForce, ForceMode2D.Impulse);
         }
@@ -101,7 +102,6 @@ public class Shooting : MonoBehaviour
         {
             GameObject bullet = Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.right * bombForce, ForceMode2D.Impulse);
         }
         else if (face == 6)
         {
