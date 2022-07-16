@@ -234,7 +234,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
   fireballPrefab: {fileID: 6178842346730439232, guid: eba2ad38ff527a7448283ce6b4b8a035, type: 3}
   arrowPrefab: {fileID: 0}
-  bomb: {fileID: 0}
+  bombPrefab: {fileID: 0}
   bulletForce: 20
   arrowForce: 0
   bombForce: 0
@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 1338154631}
   - component: {fileID: 1338154628}
   - component: {fileID: 1338154630}
+  - component: {fileID: 1338154632}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -537,6 +538,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+--- !u!61 &1338154632
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338154624}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1617398568
 GameObject:
   m_ObjectHideFlags: 0
