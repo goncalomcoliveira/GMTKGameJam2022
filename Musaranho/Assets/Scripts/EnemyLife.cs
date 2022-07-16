@@ -16,7 +16,6 @@ public class EnemyLife : MonoBehaviour
 
     public void Explode(int range, int damage) {
         player = GameObject.FindWithTag("Bomb").transform;
-        Debug.Log((Mathf.Sqrt(Mathf.Pow(player.position.x - transform.position.x, 2) + Mathf.Pow(player.position.y - transform.position.y, 2))));
         if (Mathf.Sqrt(Mathf.Pow(player.position.x - transform.position.x, 2) + Mathf.Pow(player.position.y - transform.position.y, 2)) < range)
         {
             life -= damage;
