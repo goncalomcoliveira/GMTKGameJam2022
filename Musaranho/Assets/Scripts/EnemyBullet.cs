@@ -7,12 +7,6 @@ public class EnemyBullet : MonoBehaviour
     int x;
     int y;
 
-    private PlayerFace pf;
-
-    void Start() {
-        pf = gameObject.GetComponent<PlayerFace>();
-    }
-
     void OnCollisionEnter2D(Collision2D coll)
     {
         if(coll.transform.tag == "Player")
@@ -31,7 +25,7 @@ public class EnemyBullet : MonoBehaviour
                 }
             }
             coll.gameObject.GetComponent<Shooting>().ChangeFace(y);
-            pf.Set(1);
+            coll.gameObject.GetComponent<PlayerFace>().Set(y-1);
             Debug.Log(y);
         }
         Destroy(gameObject);
