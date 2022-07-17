@@ -83,11 +83,13 @@ public class Shooting : MonoBehaviour
                 foreach (EnemyBullet go in list)
                 {
                     if (go.Bounce(rangeSamurai)){
+                        Debug.Log("n");
                         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-                        rb.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-100, 100), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+                        rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
                     }
                 }
+                Debug.Log(face);
             }
         }
         else if (face == 3)
@@ -158,12 +160,6 @@ public class Shooting : MonoBehaviour
             GameObject bullet6 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb6 = bullet6.GetComponent<Rigidbody2D>();
             rb6.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
-        }
-        else if(face != 2)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
         }
     }
    
