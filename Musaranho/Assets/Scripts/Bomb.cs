@@ -7,9 +7,15 @@ public class Bomb : MonoBehaviour
 	public int range;
 	public int damage;
 	public float countdown = 2f;
+	private AudioSystem s;
 
-	// Update is called once per frame
-	void Update()
+    private void Awake()
+    {
+		s = GameObject.FindWithTag("AudioManager").GetComponent<AudioSystem>();
+	}
+
+    // Update is called once per frame
+    void Update()
 	{
 		countdown -= Time.deltaTime;
 
@@ -19,6 +25,7 @@ public class Bomb : MonoBehaviour
 
             foreach (EnemyLife go in list)
             {
+				s.Play("croissant_boom");
 				go.Explode(range, damage);
 			}
 			

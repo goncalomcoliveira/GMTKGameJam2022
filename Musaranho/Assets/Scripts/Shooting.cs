@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public GameObject am;
+
     public Camera cam;
     public Transform firePoint;
 
@@ -30,10 +32,13 @@ public class Shooting : MonoBehaviour
     public float fireballForce;
     public float RiffleForce;
 
+    private AudioSystem s;
+
     int face = 0;
 
     private void Start()
     {
+        s = am.GetComponent<AudioSystem>();
         ChangeFace();
     }
 
@@ -54,6 +59,7 @@ public class Shooting : MonoBehaviour
         face = y;
         gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
+        s.Play("dice_roll");
         }
     public int GetFace()
     {
@@ -81,6 +87,11 @@ public class Shooting : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 EnemyBullet[] list = (EnemyBullet[])Resources.FindObjectsOfTypeAll(typeof(EnemyBullet));
+
+                if (list.Length > 0)
+                {
+                    s.Play("samurai_attack");
+                }
 
                 foreach (EnemyBullet go in list)
                 {
@@ -128,29 +139,34 @@ public class Shooting : MonoBehaviour
     {
         if(face == 1)
         {
+            s.Play("lazer_shoot");
             GameObject bullet = Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-rangeRiffle, rangeRiffle), 0)).normalized * RiffleForce, ForceMode2D.Impulse);
         }
         else if (face == 3)
         {
+            s.Play("fireball_shoot");
             GameObject bullet = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * fireballForce, ForceMode2D.Impulse);
         }
         else if (face == 4)
         {
+            s.Play("arrow_shoot");
             GameObject bullet = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
         }
         else if (face == 5)
         {
+            s.Play("croissant_down");
             GameObject bullet = Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         }
         else if (face == 6)
         {
+            s.Play("shotgun_shoot");
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);

@@ -6,6 +6,12 @@ public class EnemyBullet : MonoBehaviour
 {
     Transform player;
     public float range;
+    private AudioSystem s;
+
+    private void Awake()
+    {
+        s = GameObject.FindWithTag("AudioManager").GetComponent<AudioSystem>();
+    }
 
     void OnCollisionEnter2D(Collision2D coll)
     {
@@ -13,6 +19,7 @@ public class EnemyBullet : MonoBehaviour
         {   
             if (!coll.gameObject.GetComponent<health>().sr.enabled) {
                 coll.gameObject.GetComponent<health>().TakeDamage(1);
+                s.Play("player_hit");
                 coll.gameObject.GetComponent<Shooting>().ChangeFace();
                 coll.gameObject.GetComponent<health>().sr.enabled = true;
                 coll.gameObject.GetComponent<health>().isInvincible = Time.time + coll.gameObject.GetComponent<health>().invincibilityTime;
