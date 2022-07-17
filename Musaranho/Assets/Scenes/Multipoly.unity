@@ -6740,6 +6740,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1219029967}
     - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faceImage
+      value: 
+      objectReference: {fileID: 1802993003}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 216909589}
@@ -6747,6 +6751,38 @@ PrefabInstance:
       propertyPath: faceTransition
       value: 
       objectReference: {fileID: 185363604}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faceTransitionUI
+      value: 
+      objectReference: {fileID: 848001222}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[0]
+      value: 
+      objectReference: {fileID: 537127986, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[1]
+      value: 
+      objectReference: {fileID: 220600207, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[2]
+      value: 
+      objectReference: {fileID: 1989174389, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[3]
+      value: 
+      objectReference: {fileID: 1162788258, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[4]
+      value: 
+      objectReference: {fileID: -179031383, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: faces.Array.data[5]
+      value: 
+      objectReference: {fileID: 1297399274, guid: 1a41d8ed7593c4742974d0b79c3a8546, type: 3}
     - target: {fileID: 8818953558025451585, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
       propertyPath: m_RootOrder
       value: 4
