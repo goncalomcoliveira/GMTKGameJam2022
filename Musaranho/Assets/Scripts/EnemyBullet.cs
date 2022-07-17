@@ -32,7 +32,6 @@ public class EnemyBullet : MonoBehaviour
         Transform player = GameObject.FindWithTag("Player").transform;
         if (Mathf.Sqrt(Mathf.Pow(player.position.x - transform.position.x, 2) + Mathf.Pow(player.position.y - transform.position.y, 2)) < range)
         {
-            Destroy(gameObject);
             return true;
         }
         return false;

@@ -6749,7 +6749,11 @@ PrefabInstance:
       objectReference: {fileID: 216909589}
     - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
       propertyPath: rangeSamurai
-      value: 20
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: damagesamurai
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
       propertyPath: faceTransition
