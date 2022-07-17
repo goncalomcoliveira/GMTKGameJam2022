@@ -57,4 +57,5 @@ public class ShipMovement : MonoBehaviour
         }
         rb.MovePosition((Vector2) transform.position + ((Vector2) movement * speed * Time.deltaTime));
     }
+    
 }
