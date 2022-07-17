@@ -6,6 +6,9 @@ public class health : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
+    public float invincibilityTime = 1f;
+    public SpriteRenderer sr;
+    public float isInvincible;
 
     public Image[] heartContainers;
     public Sprite fullHeart;
