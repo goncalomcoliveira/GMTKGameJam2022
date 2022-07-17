@@ -6,6 +6,6 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DiceFive
-  m_Controller: {fileID: 9100000, guid: d964d5558fecbc84a8bf971e7246e0dc, type: 2}
+  m_Name: DiceFour
+  m_Controller: {fileID: 9100000, guid: cbe006de2aa6b37449b64d54b00baa30, type: 2}
   m_Clips: []
