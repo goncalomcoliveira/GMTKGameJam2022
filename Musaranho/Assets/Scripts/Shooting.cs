@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
     public void ChangeFace()
     {
         int y = Random.Range(1, 7);
-        if (face == y)
+        if (face == y || y==2)
         {
             if (y == 6)
             {
@@ -90,11 +90,6 @@ public class Shooting : MonoBehaviour
             if (Time.time > isAttacking) saberAnimation.SetBool("isAttacking", false);
         }
 
-        if (Input.GetButtonDown("Fire2"))
-        {
-            ChangeFace();
-            Debug.Log(face);
-        }
         Look();
         if(face == 1)
         {
@@ -113,7 +108,6 @@ public class Shooting : MonoBehaviour
 
                 EnemyBullet[] list = (EnemyBullet[])Resources.FindObjectsOfTypeAll(typeof(EnemyBullet));
                 EnemyLife[] list2 = (EnemyLife[])Resources.FindObjectsOfTypeAll(typeof(EnemyLife));
-                Debug.Log(list);
 
                 if (list.Length > 0)
                 {
@@ -126,6 +120,7 @@ public class Shooting : MonoBehaviour
                 foreach (EnemyBullet go in list)
                 {
                     if (go.Bounce(rangeSamurai)){
+                        Destroy(go);
                         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                         rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);

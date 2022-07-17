@@ -794,7 +794,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1181066543}
   - component: {fileID: 1181066542}
-  - component: {fileID: 1181066541}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -802,20 +801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1181066541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181066540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4f3f705d1643d641b038f941ea1a070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: theme
-  am: {fileID: 0}
 --- !u!212 &1181066542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1261,8 +1246,7 @@ MonoBehaviour:
   place: 
   dialogo:
   - He may seem small but his continuous bullets will make quite some damage
-  - He may not be able to shoot any bullets o his own but his sword is sure to redirect
-    any hit.
+  - He should have. He's been dead for 20 years.
   - Endless fireballs! But careful, they can't go very far.
   - May not have the most powerfull ammo, but his arrows are sure to hurt everyone
     in their path
@@ -1270,7 +1254,7 @@ MonoBehaviour:
     one at once
   - A pacifist at heart. But his daughter sure isn't
   - A pacifist at heart. But his daughter sure isn't
-  - A pacifist at heart. But his daughter sure isn't
+  - A pacifist at heart, but his daughter sure isn't
   t: {fileID: 2147430946}
 --- !u!114 &2147430946
 MonoBehaviour:
