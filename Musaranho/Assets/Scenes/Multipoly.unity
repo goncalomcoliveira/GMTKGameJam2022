@@ -269,6 +269,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0e5cd84d183ead45b4380dbc55b0e5e, type: 3}
+--- !u!1 &17447951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 17447953}
+  - component: {fileID: 17447952}
+  m_Layer: 0
+  m_Name: AudioSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &17447952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17447951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef230f27371bab34188bee2585ec0c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+--- !u!4 &17447953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17447951}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.0675964, y: 2.5631182, z: 0.2704247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &31757798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7687032024627624391, guid: 6b97326865604574d837bd01987160b9, type: 3}
@@ -304,8 +349,9 @@ GameObject:
   m_Component:
   - component: {fileID: 101044849}
   - component: {fileID: 101044848}
-  - component: {fileID: 101044850}
   - component: {fileID: 101044847}
+  - component: {fileID: 101044851}
+  - component: {fileID: 101044850}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -394,6 +440,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2123344162}
   m_Damping: 0
   m_MaxWindowSize: -1
+--- !u!114 &101044851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101044846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ba5c5703a9e464eb4199df4261a699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPosInfluence: {x: 0.15, y: 0.15, z: 0.15}
+  DefaultRotInfluence: {x: 1, y: 1, z: 1}
+  RestPositionOffset: {x: 0, y: 0, z: 0}
+  RestRotationOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &120738186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4712095906939400187, guid: 6635559766e3cc540a2c18eb3bd4024d, type: 3}
