@@ -90,7 +90,6 @@ public class Shooting : MonoBehaviour
                         rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
                     }
                 }
-                Debug.Log(face);
             }
         }
         else if (face == 3)

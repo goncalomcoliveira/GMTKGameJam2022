@@ -1,28 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
-public class Dialogue : MonoBehaviour
+public class ChangeImage : MonoBehaviour
 {
-    public string[] dialogo;
-    public TMP_Text t;
+    public Sprite[] im;
+    public Image t;
     int n;
 
     private void Start()
     {
-        t.text = dialogo[0];
+        t.sprite = im[0];
         n++;
     }
     private void Update()
     {
-        if (n > dialogo.Length - 1)
+        if (n > im.Length - 1)
         {
             //termina
         }
         else if (Input.GetButtonDown("Fire1"))
         {
-            t.text = dialogo[n];
+            t.sprite = im[n];
             n++;
         }
     }

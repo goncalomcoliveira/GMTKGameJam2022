@@ -1,28 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class Dialogue : MonoBehaviour
+public class ChangeColor : MonoBehaviour
 {
-    public string[] dialogo;
-    public TMP_Text t;
-    int n;
-
+    public SpriteRenderer t;
+    public Color[] list;
+    int n = 0;
     private void Start()
     {
-        t.text = dialogo[0];
+        t.color = list[n];
         n++;
     }
     private void Update()
     {
-        if (n > dialogo.Length - 1)
+        if (n > list.Length - 1)
         {
             //termina
         }
         else if (Input.GetButtonDown("Fire1"))
         {
-            t.text = dialogo[n];
+            t.color = list[n];
             n++;
         }
     }
