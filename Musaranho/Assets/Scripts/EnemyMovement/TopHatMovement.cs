@@ -6,11 +6,14 @@ public class TopHatMovement : MonoBehaviour
 {
     public float speed;
     public EnemyShooting sh;
+    public float waitingAttack = 1f;
+    public float waitingMove = 1f;
 
     public bool shouldRotate;
     public LayerMask whatIsPlayer;
 
     private Transform target;
+    private Vector3 targetPosition;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 movement;
@@ -19,48 +22,36 @@ public class TopHatMovement : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
-    private float nextTimeToFire = 0f;
-    float fireRate = 1f;
+    private float nextTimeToAttack = 0f;
+    private float nextTimeToMove = 0f;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
+        nextTimeToMove = Time.time + waitingMove;
         target = GameObject.FindWithTag("Player").transform;
     }
 
     private void Update() {
         isInChaseRange = Physics2D.OverlapCircle(transform.position, sh.chaseRadius, whatIsPlayer);
 
+        isInAttackRange = Physics2D.OverlapCircle(transform.position, sh.attackRadius, whatIsPlayer);
+        if(isInAttackRange && Time.time >= nextTimeToAttack) {
+            dir = target.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            dir.Normalize();
+            sh.Shoot(dir);
+            nextTimeToAttack = Time.time + waitingAttack; 
+        }
+
+        if (!isInChaseRange || Time.time < nextTimeToMove) return;
+
         //anim.SetBool("isRunning", (isInChaseRange && !isInAttackRange));
 
-        dir = target.position - transform.position;
+        rb.MovePosition(target.position);
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        dir.Normalize();
-        movement = dir;
-    }
+        nextTimeToAttack = Time.time + waitingAttack;
+        nextTimeToMove = Time.time + waitingMove;
 
-    private void FixedUpdate() {
-        if (isInChaseRange && !isInAttackRange) MoveCharacter();
-        else if (isInAttackRange && Time.time >= nextTimeToFire)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            rb.velocity = Vector2.zero;
-            sh.Shoot(dir);
-        }
-    }
-
-    private void MoveCharacter() {
-        /*if (shouldRotate) {
-            anim.SetInteger("X", (int) Mathf.Round(movement.x));
-            anim.SetInteger("Y", (int) Mathf.Round(movement.y));
-        }*/
-        float posx = (float) Random.Range(-sh.attackRadius,sh.attackRadius);
-        int signal = Random.Range(0,2);
-        if (signal == 0) signal = -1;
-        float posy = (Mathf.Sqrt(Mathf.Pow(sh.attackRadius, 2) - Mathf.Pow(posx, 2)));
-
-        Vector2 pos = new Vector2(posx + target.position.x, signal*posy + target.position.y);
-        rb.MovePosition(pos);
     }
 }
