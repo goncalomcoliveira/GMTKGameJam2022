@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PawMovement : MonoBehaviour
+public class PawnMovement : MonoBehaviour
 {
     public float speed;
     public EnemyShooting sh;
