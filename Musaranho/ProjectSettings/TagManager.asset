@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - EnemyBullet
   - Invincibility
+  - AudioManager
   layers:
   - Default
   - TransparentFX

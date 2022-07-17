@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
     }
     
     public Wave[] waves;
-    private int nextWave = 0;
+    private int nextWave = -1;
 
     public int minX, maxX, minY, maxY;
 
@@ -25,17 +25,18 @@ public class WaveSpawner : MonoBehaviour
     private float waveCountdown;
     private float searchCountdown = 1f;
 
-    private SpawnState state = SpawnState.COUNTING;
+    private SpawnState state = SpawnState.WAITING;
 
     void Start() {
         waveCountdown = timeBetweenWaves;
     }
 
     void Update() {
+        if (nextWave == -99) return;
+
         if (state == SpawnState.WAITING) {
             if (!EnemyIsAlive()) {
-                
-                Debug.Log("Wave Completed");
+                WaveCompleted();
             }
             else return;
         }
@@ -67,10 +68,23 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
+    void WaveCompleted() {
+        Debug.Log("Wave Completed");
+
+        state = SpawnState.COUNTING;
+        waveCountdown = timeBetweenWaves;
+
+        if (nextWave + 1 > waves.Length - 1) End();
+        else nextWave++;
+    }
+
+    void End() {
+        nextWave = -99;
+        Debug.Log("All waves completed");
+    }
+
     void SpawnEnemy(Transform _enemy) {
-        Debug.Log(_enemy.transform.position);
         _enemy.transform.position = new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY), 0f);
-        Debug.Log(_enemy.transform.position);
         Instantiate(_enemy, _enemy.transform.position, Quaternion.identity);
     }
 

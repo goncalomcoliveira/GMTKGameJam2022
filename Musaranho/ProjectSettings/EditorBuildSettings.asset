@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: 7049c8f78dd286e429dc749b0a105deb
+  - enabled: 1
+    path: Assets/Scenes/CharacterSheet.unity
+    guid: 480fb20df85565c4d9ab31580e084252
+  - enabled: 1
+    path: Assets/Scenes/Vitoria.unity
+    guid: c113dc44078a20d4c977d93a352fd576
   m_configObjects: {}

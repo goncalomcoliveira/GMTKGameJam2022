@@ -111,3 +111,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: theme
+    clip: {fileID: 8300000, guid: 8026ed644ec66c64d9305ef2889e4bd1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: enemy_shoot
+    clip: {fileID: 8300000, guid: 92d0f4ff955dd4b468139b416d37d7ed, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
