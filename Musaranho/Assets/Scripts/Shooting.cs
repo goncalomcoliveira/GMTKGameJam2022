@@ -9,6 +9,9 @@ public class Shooting : MonoBehaviour
 
     public Camera cam;
     public Transform firePoint;
+    public Animator saberAnimation;
+    public float duration;
+    private float isAttacking;
 
     private Vector2 mousePos;
     private float nextTimeToFire = 0f;
@@ -65,6 +68,10 @@ public class Shooting : MonoBehaviour
             }
         }
         face = y;
+
+        if (face == 2) saberAnimation.enabled = true;
+        else saberAnimation.enabled = false;
+
         gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
         faceTransition.SetTrigger("Transition");
@@ -76,8 +83,13 @@ public class Shooting : MonoBehaviour
     {
         return face;
     }
+
     void Update()
     {
+        if (face == 2) {
+            if (Time.time > isAttacking) saberAnimation.SetBool("isAttacking", false);
+        }
+
         if (Input.GetButtonDown("Fire2"))
         {
             ChangeFace();
@@ -96,6 +108,9 @@ public class Shooting : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                saberAnimation.SetBool("isAttacking", true);
+                isAttacking = Time.time + duration;
+
                 EnemyBullet[] list = (EnemyBullet[])Resources.FindObjectsOfTypeAll(typeof(EnemyBullet));
                 EnemyLife[] list2 = (EnemyLife[])Resources.FindObjectsOfTypeAll(typeof(EnemyLife));
                 Debug.Log(list);
