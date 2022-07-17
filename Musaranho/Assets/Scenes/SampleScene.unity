@@ -493,7 +493,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280053707}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -552,9 +552,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1931578772}
   bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  attackRadius: 1
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!95 &280053713
 Animator:
   serializedVersion: 4
@@ -691,7 +691,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295746045}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -750,9 +750,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2034248796}
   bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  attackRadius: 1
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!95 &295746051
 Animator:
   serializedVersion: 4
@@ -1165,7 +1165,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338355946}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1224,9 +1224,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 13753028}
   bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  attackRadius: 1
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!95 &338355952
 Animator:
   serializedVersion: 4
@@ -1888,19 +1888,19 @@ MonoBehaviour:
   waves:
   - name: First Wave
     enemy:
-    - {fileID: 8669496586919562456, guid: 7ff4c32172185354bb3e42bb5adb5646, type: 3}
-    - {fileID: 2981536064800035069, guid: 5bbfb6f2eef4c7a47b6fe8dfc94cf30c, type: 3}
-    - {fileID: 5979454280155635415, guid: 4b2567f4e3167a94091f65d9b7d8d615, type: 3}
+    - {fileID: 338355954}
+    - {fileID: 295746053}
+    - {fileID: 1798334245}
     count: 010000000100000001000000
   - name: Second Wave
     enemy:
     - {fileID: 2975642010138858383, guid: cbbda7443ec04e1478709b16a882c692, type: 3}
     - {fileID: 8993186401515706116, guid: 11f739a7695b03e45893b318b8395c3b, type: 3}
     count: 0300000001000000
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
+  minX: -5
+  maxX: 5
+  minY: -5
+  maxY: 5
   timeBetweenWaves: 5
 --- !u!4 &1062760357
 Transform:
@@ -2181,9 +2181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1644902762}
   bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  attackRadius: 1
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!50 &1338154630
 Rigidbody2D:
   serializedVersion: 4
@@ -2192,7 +2192,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338154624}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2461,7 +2461,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798334237}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2520,9 +2520,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1906703024}
   bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  attackRadius: 1
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!95 &1798334243
 Animator:
   serializedVersion: 4
