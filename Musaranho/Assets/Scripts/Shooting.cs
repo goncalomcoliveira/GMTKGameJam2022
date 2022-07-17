@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
     public void ChangeFace()
     {
         int y = Random.Range(1, 7);
-        if (face == y)
+        if (face == y || face==2)
         {
             if (y == 6)
             {
