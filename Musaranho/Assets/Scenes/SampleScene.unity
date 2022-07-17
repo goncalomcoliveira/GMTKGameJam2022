@@ -438,7 +438,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216908956}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -465,6 +465,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   sh: {fileID: 216908962}
+  waitingAttack: 0.6
+  waitingMove: 4
   shouldRotate: 1
   whatIsPlayer:
     serializedVersion: 2
@@ -484,8 +486,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1293747987}
   bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
-  attackRadius: 1
-  chaseRadius: 0
+  attackRadius: 0.5
+  chaseRadius: 20
   bulletForce: 20
 --- !u!114 &216908963
 MonoBehaviour:
@@ -1379,7 +1381,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338154624}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
