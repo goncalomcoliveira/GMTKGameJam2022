@@ -951,8 +951,8 @@ GameObject:
   - component: {fileID: 521303577}
   - component: {fileID: 521303576}
   - component: {fileID: 521303575}
+  - component: {fileID: 521303579}
   - component: {fileID: 521303574}
-  - component: {fileID: 521303573}
   - component: {fileID: 521303572}
   - component: {fileID: 521303571}
   m_Layer: 10
@@ -999,25 +999,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &521303573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521303570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7563d46feac204bb0b85903af5759e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  sh: {fileID: 521303575}
-  shouldRotate: 1
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 64
-  dir: {x: 0, y: 0, z: 0}
 --- !u!114 &521303574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,10 +1025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 906949592}
-  bulletPrefab: {fileID: 9148124985444512256, guid: ef747d2611a72e642aa09267276b77c8, type: 3}
-  attackRadius: 0.3
+  bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
+  attackRadius: 10
   chaseRadius: 20
-  bulletForce: 0
+  bulletForce: 20
 --- !u!95 &521303576
 Animator:
   serializedVersion: 4
@@ -1136,6 +1117,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &521303579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521303570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca6729b1d519c94881c15dcad57446c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  sh: {fileID: 521303575}
+  shouldRotate: 1
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 64
+  dir: {x: 0, y: 0, z: 0}
+  fireRate: 0.5
 --- !u!1001 &838836080
 PrefabInstance:
   m_ObjectHideFlags: 0
