@@ -51,6 +51,7 @@ public class Shooting : MonoBehaviour
             }
         }
         face = y;
+        gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
         }
     public int GetFace()

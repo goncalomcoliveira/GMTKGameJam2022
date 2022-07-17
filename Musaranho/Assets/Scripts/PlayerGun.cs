@@ -8,6 +8,7 @@ public class PlayerGun : MonoBehaviour
     public SpriteRenderer sr;
     public void ChangeGun(int y)
     {
+        Debug.Log("fuck");
         sr.sprite = guns[y - 1];
     }
 
