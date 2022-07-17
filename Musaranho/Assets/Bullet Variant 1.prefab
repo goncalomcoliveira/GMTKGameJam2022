@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 63b168ab3496dba44b4c1feee873e9fb, type: 3}
+    - target: {fileID: 5555477137017211504, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
       propertyPath: m_Name
       value: Bullet Variant 1

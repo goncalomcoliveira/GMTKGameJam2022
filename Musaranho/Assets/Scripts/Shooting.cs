@@ -80,8 +80,7 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire2"))
         {
-            face = Random.Range(1, 7);
-            gameObject.GetComponent<PlayerFace>().Set(face - 1);
+            ChangeFace();
             Debug.Log(face);
         }
         Look();
@@ -99,6 +98,7 @@ public class Shooting : MonoBehaviour
             {
                 EnemyBullet[] list = (EnemyBullet[])Resources.FindObjectsOfTypeAll(typeof(EnemyBullet));
                 EnemyLife[] list2 = (EnemyLife[])Resources.FindObjectsOfTypeAll(typeof(EnemyLife));
+                Debug.Log(list);
 
                 if (list.Length > 0)
                 {
