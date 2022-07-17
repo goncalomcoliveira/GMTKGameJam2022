@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8816150280423760292}
   - component: {fileID: 6597155822202688747}
+  - component: {fileID: 8232372924273185587}
   - component: {fileID: 7938799802225727355}
   - component: {fileID: -2822247353624126169}
   m_Layer: 0
@@ -86,6 +87,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8232372924273185587
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8867291046222560077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c28c87de14591f34594bdac715554653, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7938799802225727355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +122,7 @@ MonoBehaviour:
   range: 2
   damage: 20
   countdown: 2
+  anim: {fileID: 8232372924273185587}
 --- !u!50 &-2822247353624126169
 Rigidbody2D:
   serializedVersion: 4
