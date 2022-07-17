@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public GameObject am;
+
     public Camera cam;
     public Transform firePoint;
 
@@ -16,6 +18,7 @@ public class Shooting : MonoBehaviour
 
     public float fireRate1;
     public float fireRate3;
+    public float fireRate5;
 
     public GameObject bulletPrefab;
     public GameObject fireballPrefab;
@@ -29,10 +32,13 @@ public class Shooting : MonoBehaviour
     public float fireballForce;
     public float RiffleForce;
 
+    private AudioSystem s;
+
     int face = 0;
 
     private void Start()
     {
+        s = am.GetComponent<AudioSystem>();
         ChangeFace();
     }
 
@@ -53,6 +59,7 @@ public class Shooting : MonoBehaviour
         face = y;
         gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
+        s.Play("dice_roll");
         }
     public int GetFace()
     {
@@ -100,6 +107,14 @@ public class Shooting : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate3;
             }
         }
+        else if(face == 5)
+        {
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+            {
+                Shoot();
+                nextTimeToFire = Time.time + 1f / fireRate5;
+            }
+        }
         else
         {
             if (Input.GetButtonDown("Fire1"))
@@ -119,24 +134,28 @@ public class Shooting : MonoBehaviour
     {
         if(face == 1)
         {
+            s.Play("LaserShoot");
             GameObject bullet = Instantiate(lazerPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-rangeRiffle, rangeRiffle), 0)).normalized * RiffleForce, ForceMode2D.Impulse);
         }
         else if (face == 3)
         {
+            s.Play("FireballShoot");
             GameObject bullet = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * fireballForce, ForceMode2D.Impulse);
         }
         else if (face == 4)
         {
+            s.Play("ArrowShoot");
             GameObject bullet = Instantiate(arrowPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * arrowForce, ForceMode2D.Impulse);
         }
         else if (face == 5)
         {
+            s.Play("CroissantDown");
             GameObject bullet = Instantiate(bombPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         }
