@@ -146,7 +146,6 @@ public class Shooting : MonoBehaviour
         }
         else if (face == 3)
         {
-            s.Play("fireball_shoot");
             GameObject bullet = Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.right * fireballForce, ForceMode2D.Impulse);

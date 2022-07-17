@@ -31,7 +31,7 @@ public class EnemyLife : MonoBehaviour
 
     public void takeDamage(int damage)
     {
-        s.Play("enemy_hit");
+        //s.Play("enemy_hit");
         life -= damage;
     }
 }
