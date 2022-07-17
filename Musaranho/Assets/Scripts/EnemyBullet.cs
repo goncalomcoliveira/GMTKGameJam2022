@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    Transform player;
+    public float range;
     void OnCollisionEnter2D(Collision2D coll)
     {
         if(coll.transform.tag == "Player")
@@ -22,5 +24,14 @@ public class EnemyBullet : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void Update()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+        if (Mathf.Sqrt(Mathf.Pow(player.position.x - transform.position.x, 2) + Mathf.Pow(player.position.y - transform.position.y, 2)) > range)
+        {
+            Destroy(gameObject);
+        }
     }
 }
