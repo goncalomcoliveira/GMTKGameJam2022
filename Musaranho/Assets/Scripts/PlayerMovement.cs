@@ -28,7 +28,12 @@ public class PlayerMovement : MonoBehaviour
         //Physics Calculations
         Move();
         Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        float angle;
+        if(gameObject.GetComponent<Shooting>().GetFace() == 6)
+        {
+            angle = Mathf.Atan2(-lookDir.y, -lookDir.x) * Mathf.Rad2Deg;
+        }
+        else angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         rotatePoint.rotation = Quaternion.Euler(0, 0, angle);
     }
 
