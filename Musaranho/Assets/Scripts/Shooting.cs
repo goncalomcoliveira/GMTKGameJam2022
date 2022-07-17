@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour
 
     public float fireRate1;
     public float fireRate3;
+    public float fireRate5;
 
     public GameObject bulletPrefab;
     public GameObject fireballPrefab;
@@ -98,6 +99,14 @@ public class Shooting : MonoBehaviour
             {
                 Shoot();
                 nextTimeToFire = Time.time + 1f / fireRate3;
+            }
+        }
+        else if(face == 5)
+        {
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+            {
+                Shoot();
+                nextTimeToFire = Time.time + 1f / fireRate5;
             }
         }
         else

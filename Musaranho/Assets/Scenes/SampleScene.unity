@@ -1126,6 +1126,7 @@ MonoBehaviour:
   rangeSamurai: 5
   fireRate1: 10
   fireRate3: 100
+  fireRate5: 0.5
   bulletPrefab: {fileID: 8082681559931831729, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
   fireballPrefab: {fileID: 6178842346730439232, guid: eba2ad38ff527a7448283ce6b4b8a035, type: 3}
   arrowPrefab: {fileID: 1505167535238073228, guid: 5b18ab5b722044241bbc18b3e419adcd, type: 3}
