@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -80,12 +81,12 @@ public class WaveSpawner : MonoBehaviour
 
     void End() {
         nextWave = -99;
-        Debug.Log("All waves completed");
+        SceneManager.LoadScene("Vitoria", LoadSceneMode.Single);
     }
 
     void SpawnEnemy(Transform _enemy) {
-        _enemy.transform.position = new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY), 0f);
-        Instantiate(_enemy, _enemy.transform.position, Quaternion.identity);
+        Instantiate(_enemy, new Vector2(0,0), Quaternion.identity);
+        _enemy.transform.position = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0f);
     }
 
     bool EnemyIsAlive() {
