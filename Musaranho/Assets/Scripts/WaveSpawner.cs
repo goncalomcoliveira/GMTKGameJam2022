@@ -25,7 +25,7 @@ public class WaveSpawner : MonoBehaviour
     private float waveCountdown;
     private float searchCountdown = 1f;
 
-    private SpawnState state = SpawnState.COUNTING;
+    private SpawnState state = SpawnState.WAITING;
 
     void Start() {
         waveCountdown = timeBetweenWaves;
@@ -34,7 +34,6 @@ public class WaveSpawner : MonoBehaviour
     void Update() {
         if (state == SpawnState.WAITING) {
             if (!EnemyIsAlive()) {
-                
                 Debug.Log("Wave Completed");
             }
             else return;
@@ -68,9 +67,7 @@ public class WaveSpawner : MonoBehaviour
     }
 
     void SpawnEnemy(Transform _enemy) {
-        Debug.Log(_enemy.transform.position);
         _enemy.transform.position = new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY), 0f);
-        Debug.Log(_enemy.transform.position);
         Instantiate(_enemy, _enemy.transform.position, Quaternion.identity);
     }
 

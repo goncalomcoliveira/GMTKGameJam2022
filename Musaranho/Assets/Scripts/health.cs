@@ -22,7 +22,9 @@ public class health : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        if (Time.time >= isInvincible && sr.enabled) sr.enabled = false;
+
         if (maxHealth > maxHearts)
             maxHealth = maxHearts;
 
