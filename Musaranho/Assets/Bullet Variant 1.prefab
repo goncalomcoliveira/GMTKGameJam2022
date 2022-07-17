@@ -67,5 +67,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8795210346154017360, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
+      propertyPath: m_Radius
+      value: 0.101078376
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795210346154017360, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.007433302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8795210346154017360, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
+      propertyPath: m_Offset.y
+      value: 8.861185e-10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8344ba94507f5a8448e0f884444cd8e9, type: 3}
