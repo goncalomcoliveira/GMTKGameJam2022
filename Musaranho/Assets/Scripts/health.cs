@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
@@ -74,8 +75,10 @@ public class health : MonoBehaviour
     {
         currentHealth -= dmg;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0) {
+            SceneManager.LoadScene("Derrota", LoadSceneMode.Single);
             return true;
+        }
         else
             return false;
     }
