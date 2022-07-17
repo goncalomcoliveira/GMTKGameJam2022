@@ -343,13 +343,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cb658f7befe28499803f6a874ee9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  place: CharacterSheet
   dialogo:
-  - Number One
-  - Number Two
-  - Number Three
-  - Number Four
-  - Number Five
-  - Number Six
+  - Lil Dicey, the dice, has been rolled arround all his life. But today, he had
+    enough. All his faces must come together to defeat the awful pro-roll pieces
+  - 
   t: {fileID: 1526688963}
 --- !u!114 &1526688963
 MonoBehaviour:

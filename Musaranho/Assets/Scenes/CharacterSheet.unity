@@ -474,12 +474,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cb658f7befe28499803f6a874ee9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  place: Multipoly
   dialogo:
   - Number One
   - Number Two
   - Number Three
   - Number Four
   - Number Five
+  - Number Six
   - Number Six
   t: {fileID: 405101903}
 --- !u!1 &751576484
@@ -533,12 +535,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cb658f7befe28499803f6a874ee9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  place: 
   dialogo:
   - '"Nobody ever wants the one! I''ll show them! I''ll show them all!"'
   - '"Always bring a sword to a gun fight"'
   - '"A three is meh? Say that to my fire!"'
   - '"Bows are just vintage guns. And everyone loves vintage stuff!"'
   - '"My ship will never cinq"'
+  - '"Everybody always wants to roll more sixes. how about two of us?"'
+  - '"Everybody always wants to roll more sixes. how about two of us?"'
   - '"Everybody always wants to roll more sixes. how about two of us?"'
   t: {fileID: 751576487}
 --- !u!114 &751576487
@@ -841,12 +846,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cb658f7befe28499803f6a874ee9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  place: 
   dialogo:
   - The Merciless Cyclop
   - The Anti-gun Samurai
   - The Fire Wizard
   - The Four eyed Archer
   - Le Captain
+  - The dad
+  - The dad
   - The dad
   t: {fileID: 1795941334}
 --- !u!114 &1795941334
@@ -1094,6 +1102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00cb658f7befe28499803f6a874ee9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  place: 
   dialogo:
   - He may seem small but his continuous bullets will make quite some damage
   - He may not be able to shoot any bullets o his own but his sword is sure to redirect
@@ -1103,6 +1112,8 @@ MonoBehaviour:
     in their path
   - Always ready to drop his bombastic croissants. But not THAT ready. can only drop
     one at once
+  - A pacifist at heart. But his daughter sure isn't
+  - A pacifist at heart. But his daughter sure isn't
   - A pacifist at heart. But his daughter sure isn't
   t: {fileID: 2147430946}
 --- !u!114 &2147430946
