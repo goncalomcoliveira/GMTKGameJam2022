@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8993186401515706171}
   - component: {fileID: 8993186401515706117}
   - component: {fileID: 8993186401515706174}
+  - component: {fileID: -3030315423527001581}
   m_Layer: 10
   m_Name: TopHat
   m_TagString: Enemy
@@ -61,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8993186401515706118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.296, y: -3.2514434, z: 0}
+  m_LocalPosition: {x: -3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -110,8 +111,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -746479583, guid: 0802114bd56f4e54b9785eff383624f9, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -350308290, guid: fb39f2117e90d7940ae3cb0efd2c140b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,13 +166,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   sh: {fileID: 8993186401515706168}
-  waitingAttack: 0.6
+  waitingAttack: 0.15
   waitingMove: 4
   shouldRotate: 1
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
   dir: {x: 0, y: 0, z: 0}
+  wait: 0
 --- !u!50 &8993186401515706117
 Rigidbody2D:
   serializedVersion: 4
@@ -209,3 +211,23 @@ CircleCollider2D:
   m_Offset: {x: -0.0030453205, y: 0}
   serializedVersion: 2
   m_Radius: 0.31120467
+--- !u!95 &-3030315423527001581
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8993186401515706118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb8a5dccd843a7d4a97a400556bc80e9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
