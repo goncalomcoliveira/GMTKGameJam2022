@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shooting : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class Shooting : MonoBehaviour
     public int damagesamurai;
 
     public Animator faceTransition;
+    public Animator faceTransitionUI;
+    public Image faceImage;
+    public Sprite[] faces;
 
     private AudioSystem s;
 
@@ -64,8 +68,10 @@ public class Shooting : MonoBehaviour
         gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
         faceTransition.SetTrigger("Transition");
+        faceTransitionUI.SetTrigger("Transition");
+        faceImage.sprite = faces[y - 1];
         s.Play("dice_roll");
-        }
+    }
     public int GetFace()
     {
         return face;
