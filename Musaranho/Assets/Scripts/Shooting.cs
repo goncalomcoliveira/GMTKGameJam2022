@@ -32,6 +32,8 @@ public class Shooting : MonoBehaviour
     public float fireballForce;
     public float RiffleForce;
 
+    public int damagesamurai;
+
     public Animator faceTransition;
 
     private AudioSystem s;
@@ -95,7 +97,7 @@ public class Shooting : MonoBehaviour
                 {
                     s.Play("samurai_attack");
                 }
-
+                GetComponent<EnemyLife>().NoRangeDoSamurai(rangeSamurai, damagesamurai);
                 foreach (EnemyBullet go in list)
                 {
                     if (go.Bounce(rangeSamurai)){
@@ -171,22 +173,22 @@ public class Shooting : MonoBehaviour
             s.Play("shotgun_shoot");
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
             GameObject bullet2 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb2 = bullet2.GetComponent<Rigidbody2D>();
-            rb2.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb2.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
             GameObject bullet3 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb3 = bullet3.GetComponent<Rigidbody2D>();
-            rb3.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb3.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
             GameObject bullet4 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb4 = bullet4.GetComponent<Rigidbody2D>();
-            rb4.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb4.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
             GameObject bullet5 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb5 = bullet5.GetComponent<Rigidbody2D>();
-            rb5.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb5.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
             GameObject bullet6 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb6 = bullet6.GetComponent<Rigidbody2D>();
-            rb6.AddForce(-(firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
+            rb6.AddForce((firePoint.right + new Vector3(0, Random.Range(-range, range), 0)).normalized * bulletForce, ForceMode2D.Impulse);
         }
     }
    
