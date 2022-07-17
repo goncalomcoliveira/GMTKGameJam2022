@@ -8,6 +8,7 @@ TagManager:
   - Bomb
   - Wall
   - EnemyBullet
+  - Invincibility
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - arrow
   - enemy
   - Confiner
-  - 
+  - Invincibility
   - 
   - 
   - 
