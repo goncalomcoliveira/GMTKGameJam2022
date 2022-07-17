@@ -355,7 +355,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7367773, y: 1}
+    m_SensorSize: {x: 2.6855123, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6748,6 +6748,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 216909589}
     - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: rangeSamurai
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818953558025451584, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
       propertyPath: faceTransition
       value: 
       objectReference: {fileID: 185363604}
@@ -6875,6 +6879,18 @@ PrefabInstance:
       propertyPath: heartContainers.Array.data[4]
       value: 
       objectReference: {fileID: 334133265}
+    - target: {fileID: 8818953558694283983, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818953558694283983, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8818953558694283983, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b03dfeb19baaf34eb79cdf1c341294d, type: 3}
 --- !u!1001 &1456415874
