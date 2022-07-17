@@ -16,11 +16,11 @@ public class ShipMovement : MonoBehaviour
     private Vector2 movement;
     public Vector3 dir;
 
-    private bool isInChaseRange;
-    private bool isInAttackRange;
+    private bool isInChaseRange = false;
+    private bool isInAttackRange = false;
 
     private float nextTimeToFire = 0f;
-    float fireRate = 1f;
+    public float fireRate = 1f;
 
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -57,5 +57,5 @@ public class ShipMovement : MonoBehaviour
         }
         rb.MovePosition((Vector2) transform.position + ((Vector2) movement * speed * Time.deltaTime));
     }
-    
+
 }
