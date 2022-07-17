@@ -51,10 +51,6 @@ public class ShipMovement : MonoBehaviour
     }
 
     private void MoveCharacter() {
-        if (shouldRotate) {
-            anim.SetInteger("X", (int) Mathf.Round(movement.x));
-            anim.SetInteger("Y", (int) Mathf.Round(movement.y));
-        }
         rb.MovePosition((Vector2) transform.position + ((Vector2) movement * speed * Time.deltaTime));
     }
 

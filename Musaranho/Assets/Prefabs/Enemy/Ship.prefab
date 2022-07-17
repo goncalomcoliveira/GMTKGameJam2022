@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2975642010138858375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -4, z: 0}
+  m_LocalPosition: {x: 7, y: 6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -80,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -746479583, guid: 0802114bd56f4e54b9785eff383624f9, type: 3}
-  m_Color: {r: 0.4811321, g: 0.19925924, b: 0.11982911, a: 1}
+  m_Sprite: {fileID: -306323607, guid: 7ae7393d193f4504dab356c2956421a6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 2975642010138858375}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b698ec1d3db0cb040bd4b88acb2947bd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4871e106b45e7bf49b90ee9cd85a1e6a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -125,9 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2975642010793465421}
   bulletPrefab: {fileID: 9148124985444512256, guid: 8000625fc5d64374b91373fb16975e7f, type: 3}
-  attackRadius: 10
+  attackRadius: 5
   chaseRadius: 20
-  bulletForce: 20
+  bulletForce: 10
 --- !u!114 &2975642010138858382
 MonoBehaviour:
   m_ObjectHideFlags: 0
