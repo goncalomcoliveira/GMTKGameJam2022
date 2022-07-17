@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
+    public GameObject am;
+
     public Camera cam;
     public Transform firePoint;
 
