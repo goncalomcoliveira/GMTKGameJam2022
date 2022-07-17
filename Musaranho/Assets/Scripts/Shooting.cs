@@ -32,6 +32,8 @@ public class Shooting : MonoBehaviour
     public float fireballForce;
     public float RiffleForce;
 
+    public Animator faceTransition;
+
     private AudioSystem s;
 
     int face = 0;
@@ -59,6 +61,7 @@ public class Shooting : MonoBehaviour
         face = y;
         gameObject.GetComponent<PlayerGun>().ChangeGun(y);
         gameObject.GetComponent<PlayerFace>().Set(y - 1);
+        faceTransition.SetTrigger("Transition");
         s.Play("dice_roll");
         }
     public int GetFace()
