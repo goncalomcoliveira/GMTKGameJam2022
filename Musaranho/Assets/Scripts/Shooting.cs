@@ -56,7 +56,7 @@ public class Shooting : MonoBehaviour
     public void ChangeFace()
     {
         int y = Random.Range(1, 7);
-        if (face == y || face==2)
+        if (face == y || y==2)
         {
             if (y == 6)
             {
@@ -90,10 +90,6 @@ public class Shooting : MonoBehaviour
             if (Time.time > isAttacking) saberAnimation.SetBool("isAttacking", false);
         }
 
-        if (Input.GetButtonDown("Fire2"))
-        {
-            ChangeFace();
-        }
         Look();
         if(face == 1)
         {
